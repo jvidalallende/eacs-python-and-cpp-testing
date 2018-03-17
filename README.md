@@ -3,6 +3,19 @@
 This repository hosts the investigation assignment for EACS Software Tests.
 It is focused on how to use [Python] to test [C++] programs.
 
+[is it acceptable practice to unit test a program in another language]
+
+# Possible alternatives
+* Wrapping C++ with python a python framework (python c++ binding). For the binding can be used next tools:
+  * [boost.python]
+  * [cython]
+  * [ctypes]
+* Generate C++ test code with python
+  * [C,C++,Python unit/integ test generator]
+  
+* Code coverage
+  * [code coverage] Why just stop running unit test, why don't get some more information.
+
 # Authors
 
 This assignment is done by:
@@ -13,6 +26,8 @@ This assignment is done by:
 
 * [Grip] is useful to preview [GitHub Markdown] pages locally.
 
+Links to look at.
+
 
 [//]: # (Place links down here)
 
@@ -22,3 +37,10 @@ This assignment is done by:
 [jvidalallende]: https://github.com/jvidalallende
 [Grip]: https://github.com/joeyespo/grip
 [GitHub MarkDown]: https://help.github.com/articles/about-writing-and-formatting-on-github/
+[boost.python]: http://www.boost.org/doc/libs/1_66_0/libs/python/doc/html/index.html
+[cython]: http://cython.org/
+[ctypes]: https://docs.python.org/3/library/ctypes.html
+[C,C++,Python unit/integ test generator]: https://sourceforge.net/projects/testgen/
+[code coverage]: https://stackoverflow.com/questions/29762191/c-code-coverage-using-python-based-unit-testing
+[is it acceptable practice to unit test a program in another language]: https://stackoverflow.com/questions/23622923/is-it-acceptable-practice-to-unit-test-a-program-in-a-different-language
+
