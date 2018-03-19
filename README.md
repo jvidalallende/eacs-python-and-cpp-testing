@@ -7,16 +7,17 @@ It is focused on how to use [Python] to test [C++] programs.
 
 # Possible alternatives
 * Wrapping C++ with a framework (python c++ binding). For the binding can be used next tools:
-  * Programming mainly with python:
-    * [ctypes]
+  * Programming mainly with python (be aware of the differences in the API between python 2.7 and 3.5:
+    * [ctypes] is a foreign function library for Python. It provides C compatible data types, and allows calling functions in DLLs or shared libraries. It can be used to wrap these libraries in pure Python.
     * [cffi] C Foreign Function Interface for Python. Interact with almost any C code from Python, based on C-like declarations that you can often copy-paste from header files or documentation. (See vide from [Alexander Steffen])
+    * [cython] is an optimising static compiler for both the Python programming language and the extended Cython programming language (based on Pyrex)
   * Programmin mainly with C++ (see video from [Diego Rodriguez])
-    * [boost.python]
-    * [pybind11] Seamless operability between C++11 and Python (see vide from [Ivan Smirnov])
+    * [boost.python] a C++ library which enables seamless interoperability between C++ and the Python programming language
+    * [pybind11] seamless operability between C++11 and Python (see vide from [Ivan Smirnov])
   * Using an IDL
-    * [SWIG]
+    * [SWIG] is an interface compiler that connects programs written in C and C++ with scripting languages such as Perl, Python, Ruby, and Tcl
     
-  * [cython]
+  
  
 * Generate C++ test code with python
   * [C,C++,Python unit/integ test generator]
@@ -50,6 +51,7 @@ Links to look at.
 [cython]: http://cython.org/
 [ctypes]: https://docs.python.org/3/library/ctypes.html
 [cffi]: https://cffi.readthedocs.io/en/latest/
+[SWIG]: http://www.swig.org/exec.html
 [C,C++,Python unit/integ test generator]: https://sourceforge.net/projects/testgen/
 [code coverage]: https://stackoverflow.com/questions/29762191/c-code-coverage-using-python-based-unit-testing
 [is it acceptable practice to unit test a program in another language]: https://stackoverflow.com/questions/23622923/is-it-acceptable-practice-to-unit-test-a-program-in-a-different-language
