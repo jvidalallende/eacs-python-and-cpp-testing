@@ -10,9 +10,9 @@ It is focused on how to use [Python] to test [C++] programs.
   * Programming mainly with python:
     * [ctypes]
     * [cffi] C Foreign Function Interface for Python. Interact with almost any C code from Python, based on C-like declarations that you can often copy-paste from header files or documentation. (See vide from [Alexander Steffen])
-  * Programmin mainly with C++ (see video from [Diego Rodriguez]
+  * Programmin mainly with C++ (see video from [Diego Rodriguez])
     * [boost.python]
-    * [pybin11] Seamless operability between C++11 and Python
+    * [pybind11] Seamless operability between C++11 and Python (see vide from [Ivan Smirnov])
   * Using an IDL
     * [SWIG]
     
@@ -55,4 +55,6 @@ Links to look at.
 [is it acceptable practice to unit test a program in another language]: https://stackoverflow.com/questions/23622923/is-it-acceptable-practice-to-unit-test-a-program-in-a-different-language
 [Diego Rodriguez]: https://www.youtube.com/watch?v=bJq1n4gQFfw&t=275s
 [Alexander Steffen]: https://www.youtube.com/watch?v=zW_HyDTPjO0
+[Ivan Smirnov]: https://www.youtube.com/watch?v=jQedHfF1Jfw&t=75s
+
 
