@@ -17,7 +17,7 @@ It is focused on how to use [Python] to test [C++] programs.
   * Using an IDL
     * [SWIG] is an interface compiler that connects programs written in C and C++ with scripting languages such as Perl, Python, Ruby, and Tcl
     
-  
+# More about python and C/C++ testing  
  
 * Generate C++ test code with python
   * [C,C++,Python unit/integ test generator]
