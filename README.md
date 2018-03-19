@@ -6,10 +6,18 @@ It is focused on how to use [Python] to test [C++] programs.
 [is it acceptable practice to unit test a program in another language]
 
 # Possible alternatives
-* Wrapping C++ with python a python framework (python c++ binding). For the binding can be used next tools:
-  * [boost.python]
+* Wrapping C++ with a framework (python c++ binding). For the binding can be used next tools:
+  * Programming mainly with python:
+    * [ctypes]
+    * [cffi] C Foreign Function Interface for Python. Interact with almost any C code from Python, based on C-like declarations that you can often copy-paste from header files or documentation. (See vide from [Alexander Steffen])
+  * Programmin mainly with C++ (see video from [Diego Rodriguez]
+    * [boost.python]
+    * [pybin11] Seamless operability between C++11 and Python
+  * Using an IDL
+    * [SWIG]
+    
   * [cython]
-  * [ctypes]
+ 
 * Generate C++ test code with python
   * [C,C++,Python unit/integ test generator]
   
@@ -38,9 +46,13 @@ Links to look at.
 [Grip]: https://github.com/joeyespo/grip
 [GitHub MarkDown]: https://help.github.com/articles/about-writing-and-formatting-on-github/
 [boost.python]: http://www.boost.org/doc/libs/1_66_0/libs/python/doc/html/index.html
+[pybind11]: https://github.com/pybind/pybind11
 [cython]: http://cython.org/
 [ctypes]: https://docs.python.org/3/library/ctypes.html
+[cffi]: https://cffi.readthedocs.io/en/latest/
 [C,C++,Python unit/integ test generator]: https://sourceforge.net/projects/testgen/
 [code coverage]: https://stackoverflow.com/questions/29762191/c-code-coverage-using-python-based-unit-testing
 [is it acceptable practice to unit test a program in another language]: https://stackoverflow.com/questions/23622923/is-it-acceptable-practice-to-unit-test-a-program-in-a-different-language
+[Diego Rodriguez]: https://www.youtube.com/watch?v=bJq1n4gQFfw&t=275s
+[Alexander Steffen]: https://www.youtube.com/watch?v=zW_HyDTPjO0
 
