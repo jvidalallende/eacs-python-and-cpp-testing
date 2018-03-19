@@ -10,7 +10,7 @@ It is focused on how to use [Python] to test [C++] programs.
   * Programming mainly with python (be aware of the differences in the API between python 2.7 and 3.5:
     * [ctypes] is a foreign function library for Python. It provides C compatible data types, and allows calling functions in DLLs or shared libraries. It can be used to wrap these libraries in pure Python.
     * [cffi] C Foreign Function Interface for Python. Interact with almost any C code from Python, based on C-like declarations that you can often copy-paste from header files or documentation. (See vide from [Alexander Steffen])
-    * [cython] is an optimising static compiler for both the Python programming language and the extended Cython programming language (based on Pyrex)
+    * [cython] is an optimising static compiler for both the Python programming language and the extended Cython programming language (based on Pyrex) Use Cython to give Pythonic interfaces to C and C++ libraries [cython book]
   * Programmin mainly with C++ (see video from [Diego Rodriguez])
     * [boost.python] a C++ library which enables seamless interoperability between C++ and the Python programming language
     * [pybind11] seamless operability between C++11 and Python (see vide from [Ivan Smirnov])
@@ -49,6 +49,7 @@ Links to look at.
 [boost.python]: http://www.boost.org/doc/libs/1_66_0/libs/python/doc/html/index.html
 [pybind11]: https://github.com/pybind/pybind11
 [cython]: http://cython.org/
+[cython book]: http://shop.oreilly.com/product/0636920033431.do
 [ctypes]: https://docs.python.org/3/library/ctypes.html
 [cffi]: https://cffi.readthedocs.io/en/latest/
 [SWIG]: http://www.swig.org/exec.html
