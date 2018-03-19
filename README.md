@@ -7,13 +7,13 @@ It is focused on how to use [Python] to test [C++] programs.
 
 # Possible alternatives
 * Wrapping C++ with a framework (python c++ binding). For the binding can be used next tools:
-  * Programming mainly with python (be aware of the differences in the API between python 2.7 and 3.5:
+  * Programming mainly with python:
     * [ctypes] is a foreign function library for Python. It provides C compatible data types, and allows calling functions in DLLs or shared libraries. It can be used to wrap these libraries in pure Python.
     * [cffi] C Foreign Function Interface for Python. Interact with almost any C code from Python, based on C-like declarations that you can often copy-paste from header files or documentation. (See vide from [Alexander Steffen])
   * Programmin mainly with C++ (see video from [Diego Rodriguez])
     * [boost.python] a C++ library which enables seamless interoperability between C++ and the Python programming language
     * [pybind11] seamless operability between C++11 and Python (see vide from [Ivan Smirnov])
-    * [cython] is an optimising static compiler for both the Python programming language and the extended Cython programming language (based on Pyrex) Use Cython to give Pythonic interfaces to C and C++ libraries [cython book]
+    * [cython] is an optimising static compiler for both the Python programming language and the extended Cython programming language (based on Pyrex) Use Cython to give Pythonic interfaces to C and C++ libraries [cython book] (be aware of the differences in the API between python 2.7 and 3.5)
   * Using an IDL
     * [SWIG] is an interface compiler that connects programs written in C and C++ with scripting languages such as Perl, Python, Ruby, and Tcl
     
