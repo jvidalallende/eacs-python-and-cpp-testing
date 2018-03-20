@@ -16,6 +16,7 @@ It is focused on how to use [Python] to test [C++] programs.
     * [cython] is an optimising static compiler for both the Python programming language and the extended Cython programming language (based on Pyrex) Use Cython to give Pythonic interfaces to C and C++ libraries [cython book] (be aware of the differences in the API between python 2.7 and 3.5)
   * Using an IDL
     * [SWIG] is an interface compiler that connects programs written in C and C++ with scripting languages such as Perl, Python, Ruby, and Tcl
+    * [SIP] is a tool that makes it very easy to create Python bindings for C and C++ libraries. SIP comprises a code generator and a Python module. The code generator processes a set of specification files and generates C or C++ code which is then compiled to create the bindings extension module. The sip Python module provides support functions to the automatically generated code.
     
 # More about python and C/C++ testing  
  
@@ -53,6 +54,7 @@ Links to look at.
 [ctypes]: https://docs.python.org/3/library/ctypes.html
 [cffi]: https://cffi.readthedocs.io/en/latest/
 [SWIG]: http://www.swig.org/exec.html
+[SIP]: https://www.riverbankcomputing.com/software/sip/intro
 [C,C++,Python unit/integ test generator]: https://sourceforge.net/projects/testgen/
 [code coverage]: https://stackoverflow.com/questions/29762191/c-code-coverage-using-python-based-unit-testing
 [is it acceptable practice to unit test a program in another language]: https://stackoverflow.com/questions/23622923/is-it-acceptable-practice-to-unit-test-a-program-in-a-different-language
