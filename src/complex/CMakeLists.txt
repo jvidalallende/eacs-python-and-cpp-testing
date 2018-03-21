@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.0)
 
-project(Complex VERSION 0.1 DESCRIPTION "C++ library for complex numbers")
+project(complex)
 
-add_library(Complex SHARED Complex.cpp)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -Wall -Werror")
+
+add_library(${PROJECT_NAME} STATIC Complex.cpp)

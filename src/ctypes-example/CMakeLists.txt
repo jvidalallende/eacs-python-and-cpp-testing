@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.0)
+project(complex-ctypes)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
-project(complex)
+include_directories(../complex)
+link_directories(../complex)
 
-add_library(complex SHARED Complex.cpp)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -Wall -Werror")
+
+add_library(${PROJECT_NAME} SHARED Complex_wrapper.cpp)
+target_link_libraries(${PROJECT_NAME} complex)

@@ -2,7 +2,7 @@
 
 import ctypes
 
-lib = ctypes.cdll.LoadLibrary("./libComplex.so")
+lib = ctypes.cdll.LoadLibrary("./libcomplex-ctypes.so")
 
 def setup_ctypes():
     """
@@ -51,7 +51,7 @@ class Complex(object):
         lib.deleteComplex(ctypes.c_void_p(c_complex))
         return result
 
-    def equals(self, other):
+    def __eq__(self, other):
         return lib.equals(ctypes.c_void_p(self.obj), ctypes.c_void_p(other.obj))
 
     def __str__(self):

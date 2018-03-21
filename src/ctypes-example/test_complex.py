@@ -18,7 +18,12 @@ class TestComplex(unittest.TestCase):
     def test_equals(self):
         c1 = complex.Complex(15, 10)
         c2 = complex.Complex(15, 10)
-        self.assertTrue(c1.equals(c2))
+        self.assertEqual(c1, c2)
+
+    def test_not_equals(self):
+        c1 = complex.Complex(15, 10)
+        c2 = complex.Complex(22, 22)
+        self.assertNotEqual(c1, c2)
 
 if __name__ == '__main__':
     unittest.main()
