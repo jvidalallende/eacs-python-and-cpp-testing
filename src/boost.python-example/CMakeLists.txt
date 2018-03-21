@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.0)
-project(complex VERSION 0.1 DESCRIPTION "C++ library for complex numbers")
+project(complex)
 
-find_package(Boost 1.60 REQUIRED COMPONENTS python)
+find_package(Boost REQUIRED COMPONENTS python)
 find_package(PythonLibs REQUIRED)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Werror -g -O0")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 include_directories(${PYTHON_INCLUDE_DIR})
 
