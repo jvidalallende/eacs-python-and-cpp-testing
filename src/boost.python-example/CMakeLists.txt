@@ -1,14 +1,15 @@
 cmake_minimum_required(VERSION 3.0)
-project(complex)
+project(complex_boost)
 
 find_package(Boost REQUIRED COMPONENTS python)
 find_package(PythonLibs REQUIRED)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -Wall -Werror")
 
-include_directories(${PYTHON_INCLUDE_DIR})
+include_directories(${PYTHON_INCLUDE_DIR} ../complex)
+link_directories(../complex)
 
-add_library(complex SHARED Complex.cpp)
-target_link_libraries(complex ${Boost_LIBRARIES} ${PYTHON_LIBRARIES})
-set_target_properties(complex PROPERTIES SUFFIX .so)
-set_target_properties(complex PROPERTIES PREFIX "")
+add_library(${PROJECT_NAME} SHARED Complex_boost.cpp)
+target_link_libraries(${PROJECT_NAME} complex ${Boost_LIBRARIES})
+set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX .so)
+set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "")
