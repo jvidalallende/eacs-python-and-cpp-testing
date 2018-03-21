@@ -1,6 +1,6 @@
-%module complex
+%module complex_swig
 %{
-#include "Complex.h"
+#include <Complex.h>
 %}
 
 class Complex {
