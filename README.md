@@ -7,7 +7,8 @@ Python can be integrated with other languages, one of them is C++ [PythonAndC++]
 
 In this assigment we are focus in how to integrate  C/C++ code with Python. Furthermore we are interested if it is possible to run unit tests writing in Python to test C++ code.
 
-The First question we should ask to ourself, [is it acceptable practice to unit test a program in another language]?
+The First question we should ask to ourself, [is it acceptable practice to unit test a program in another language]? As always different opinions. But why not? maybe it is easier implement the tests with Python. The main difficult is to do the wrapper of the C++ code.
+To do that wrapper are different alternatives, ones seem easier that others. Some others seem to provide more better wrapping, that is wrap more C++ funcitonality. As always, it can it a trade-off between needs and personal taste for one approach or another.
 
 # Possible alternatives
 * Wrapping C++ with a framework (python c++ binding). For the binding can be used next tools:
