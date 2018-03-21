@@ -31,6 +31,12 @@ To do that wrapper are different alternatives, ones seem easier that others. Som
 * Code coverage
   * [code coverage] Why just stop running unit test, why don't get some more information.
 
+# Environment to run the examples
+To be completed
+
+# Run with docker
+TBD
+
 # Authors
 
 This assignment is done by:
