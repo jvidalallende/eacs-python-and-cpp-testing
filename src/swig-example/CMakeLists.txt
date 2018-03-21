@@ -9,8 +9,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -Wall -Werror")
 include_directories(${PYTHON_INCLUDE_DIR} ../complex)
 link_directories(../complex)
 
-#add_library(${PROJECT_NAME} SHARED)
-
 set_property(SOURCE Complex.i PROPERTY CPLUSPLUS ON)
 swig_add_module(${PROJECT_NAME} python Complex.i)
 swig_link_libraries(${PROJECT_NAME} complex)
+
+configure_file(test_complex.py test_complex.py COPYONLY)

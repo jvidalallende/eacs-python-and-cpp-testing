@@ -8,3 +8,5 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -Wall -Werror")
 
 add_library(${PROJECT_NAME} SHARED Complex_wrapper.cpp)
 target_link_libraries(${PROJECT_NAME} complex)
+
+configure_file(test_complex.py test_complex.py COPYONLY)

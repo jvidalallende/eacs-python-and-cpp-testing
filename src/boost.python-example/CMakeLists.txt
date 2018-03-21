@@ -13,3 +13,5 @@ add_library(${PROJECT_NAME} SHARED Complex_boost.cpp)
 target_link_libraries(${PROJECT_NAME} complex ${Boost_LIBRARIES})
 set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX .so)
 set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "")
+
+configure_file(test_complex.py test_complex.py COPYONLY)
