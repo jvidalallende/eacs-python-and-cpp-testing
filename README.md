@@ -32,7 +32,15 @@ To do that wrapper are different alternatives, ones seem easier that others. Som
   * [code coverage] Why just stop running unit test, why don't get some more information.
 
 # Environment to run the examples
-To be completed
+* For ctypes
+  * gcc with c++ support 
+    * tested with gcc 6.4.0 in cygwin
+  * cmake 3.0 or higher 
+    * tested with cmake 3.6.2 in cygwin
+  * make 
+    * tested with make 4.2.1 in cygwin
+  * python 2.7 
+    * tested with python 2.7.14 in cygwin
 
 # Run with docker
 TBD
