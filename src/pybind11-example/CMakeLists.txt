@@ -1,14 +1,15 @@
 cmake_minimum_required(VERSION 3.0)
-project(complex)
+project(complex_pybind11)
 
 find_package(PythonLibs REQUIRED)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 set(PYBIND11_INCLUDE_DIR "pybind11/include")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -Wall -Werror")
 
-include_directories(${PYTHON_INCLUDE_DIR} ${PYBIND11_INCLUDE_DIR})
+include_directories(../complex ${PYTHON_INCLUDE_DIR} ${PYBIND11_INCLUDE_DIR})
+link_directories(../complex)
 
-add_library(complex SHARED Complex.cpp)
-target_link_libraries(complex ${PYTHON_LIBRARIES})
-set_target_properties(complex PROPERTIES SUFFIX .so)
-set_target_properties(complex PROPERTIES PREFIX "")
+add_library(${PROJECT_NAME} SHARED Complex_pybind11.cpp)
+target_link_libraries(${PROJECT_NAME} complex ${Boost_LIBRARIES})
+set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX .so)
+set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "")
