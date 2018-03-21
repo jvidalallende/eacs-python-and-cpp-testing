@@ -3,7 +3,11 @@
 This repository hosts the investigation assignment for EACS Software Tests.
 It is focused on how to use [Python] to test [C++] programs.
 
-[is it acceptable practice to unit test a program in another language]
+Python can be integrated with other languages, one of them is C++ [PythonAndC++]. This is a two way road, we can use C/C++ from python, by mean of integrating built-in modules in python, or run python code from C++.
+
+In this assigment we are focus in how to integrate  C/C++ code with Python. Furthermore we are interested if it is possible to run unit tests writing in Python to test C++ code.
+
+The First question we should ask to ourself, [is it acceptable practice to unit test a program in another language]?
 
 # Possible alternatives
 * Wrapping C++ with a framework (python c++ binding). For the binding can be used next tools:
@@ -43,6 +47,7 @@ Links to look at.
 
 [Python]: https://www.python.org/
 [C++]: https://isocpp.org/
+[PythonAndC++]: https://wiki.python.org/moin/IntegratingPythonWithOtherLanguages#C.2FC.2B-.2B-
 [jramed]: https://github.com/jramed
 [jvidalallende]: https://github.com/jvidalallende
 [Grip]: https://github.com/joeyespo/grip
