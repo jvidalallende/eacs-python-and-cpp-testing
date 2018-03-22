@@ -32,6 +32,7 @@ To do that wrapper there are different alternatives, ones seem easier that other
   * [code coverage] Why just stop running unit test, why don't get some more information.
 
 # Environment to run the examples
+Have unittest unit test framework for python.
 * For ctypes
   * gcc with c++ support 
     * tested with gcc 6.4.0 in cygwin
@@ -41,6 +42,20 @@ To do that wrapper there are different alternatives, ones seem easier that other
     * tested with make 4.2.1 in cygwin
   * python 2.7 
     * tested with python 2.7.14 in cygwin
+* For boost.python
+  * pythonlibs
+    * For cygwin install python2-devel
+  * Boost-python
+    * For cygwin install libboost_python-devel
+* For pybind11
+  * Install pybind11. done by the CMakeList 
+  * pythonlibs
+    * For cygwin install python2-devel
+* For swig
+  * pythonlibs
+    * For cygwin install python2-devel
+  * SWIG
+    * For cygwin install swig: C/C++ wrapper generator
 
 # Run with docker
 TBD
