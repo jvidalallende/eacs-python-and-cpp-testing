@@ -44,7 +44,7 @@ Have unittest unit test framework for python.
     * tested with python 2.7.14 in cygwin
 * For boost.python
   * pythonlibs
-    * For cygwin install python2-devel
+    * For cygwin install python2-devel (doesn't work yet in cygwin)
   * Boost-python
     * For cygwin install libboost_python-devel
 * For pybind11
