@@ -3,74 +3,186 @@
 This repository hosts the investigation assignment for EACS Software Tests.
 It is focused on how to use [Python] to test [C++] programs.
 
-Python can be integrated with other languages, one of them is C++, see  [Python and C++]. This is a two way road, we can use C/C++ from python, by mean of integrating built-in modules in python, or run python code from C++.
-
-In this assigment we are focus in how to integrate  C/C++ code with Python. Furthermore we are interested if it is possible to run unit tests writing in Python to test C++ code.
-
-The First question we should ask to ourself, [is it acceptable practice to unit test a program in another language]? As always different opinions. But why not? maybe it is easier implement the tests with Python. The main difficulty is to do the wrapper for the C++ code.
-To do that wrapper there are different alternatives, ones seem easier that others. Some others seem to provide a better wrapping, that is wrap more C++ funcitonality. As always, it will be a trade-off between needs and personal taste for one approach or another.
-
-# Possible alternatives
-* Wrapping C++ with a framework (python c++ binding). For the binding can be used next tools:
-  * Programming mainly with python:
-    * [ctypes] is a foreign function library for Python. It provides C compatible data types, and allows calling functions in DLLs or shared libraries. It can be used to wrap these libraries in pure Python.
-    * [cffi] C Foreign Function Interface for Python. Interact with almost any C code from Python, based on C-like declarations that you can often copy-paste from header files or documentation. (See vide from [Alexander Steffen])
-  * Programmin mainly with C++ (see video from [Diego Rodriguez])
-    * [boost.python] a C++ library which enables seamless interoperability between C++ and the Python programming language
-    * [pybind11] seamless operability between C++11 and Python (see vide from [Ivan Smirnov])
-    * [cython] is an optimising static compiler for both the Python programming language and the extended Cython programming language (based on Pyrex) Use Cython to give Pythonic interfaces to C and C++ libraries [cython book]. Remember that Cython is a implementation of the Python language, so the way it integrate C/C++ could can not be reused and even there is differencies in the API between python 2.7 and 3.5. The documentation from python recomend to use other methods if that integration must be portable, that is usable by other python implementation different that Cython.
-  * Using an IDL
-    * [SWIG] is an interface compiler that connects programs written in C and C++ with scripting languages such as Perl, Python, Ruby, and Tcl
-    * [SIP] is a tool that makes it very easy to create Python bindings for C and C++ libraries. SIP comprises a code generator and a Python module. The code generator processes a set of specification files and generates C or C++ code which is then compiled to create the bindings extension module. The sip Python module provides support functions to the automatically generated code.
-    
-# More about python and C/C++ testing  
- 
-* Generate C++ test code with python
-  * [C,C++,Python unit/integ test generator]
-  
-* Code coverage
-  * [code coverage] Why just stop running unit test, why don't get some more information.
-
-# Environment to run the examples
-Have unittest unit test framework for python.
-* For ctypes
-  * gcc with c++ support 
-    * tested with gcc 6.4.0 in cygwin
-  * cmake 3.0 or higher 
-    * tested with cmake 3.6.2 in cygwin
-  * make 
-    * tested with make 4.2.1 in cygwin
-  * python 2.7 
-    * tested with python 2.7.14 in cygwin
-* For boost.python
-  * pythonlibs
-    * For cygwin install python2-devel (doesn't work yet in cygwin)
-  * Boost-python
-    * For cygwin install libboost_python-devel
-* For pybind11
-  * Install pybind11. done by the CMakeList 
-  * pythonlibs
-    * For cygwin install python2-devel
-* For swig
-  * pythonlibs
-    * For cygwin install python2-devel
-  * SWIG
-    * For cygwin install swig: C/C++ wrapper generator
-
-# Run with docker
-TBD
-
 # Authors
 
 This assignment is done by:
 * Juan Ramón Medina Muñoz ([jramed])
 * Juan Vidal Allende ([jvidalallende])
 
+# Motivation
+
+Python can be integrated with other languages, one of them is C++, see [Python and C++].
+This is a two way road, we can use C/C++ from python, by mean of integrating
+built-in modules in python, or run python code from C++.
+
+In this assigment we are focusing in how to integrate  C/C++ code with Python.
+Furthermore we are interested if it is possible to run unit tests written in
+Python to test C++ code.
+
+The first question we should ask to ourselves is:
+[is it acceptable practice to unit test a program in another language]?
+As always there are different opinions, but why not? Sometimes it is easier
+implement the tests with Python.
+
+The main difficulty is to do the wrapper for the C++ code. For this, there are
+different alternatives, with different levels of ease-of-use, C++ support,
+compilation time, etc.
+
+As always, it will be a trade-off between needs and personal taste for one approach or another.
+
+# Possible alternatives
+To wrap C++ code with a framework (python c++ binding), we have identified the
+following alternatives:
+
+* Programming mainly with python:
+  * [ctypes] is a foreign function library for Python. It provides C compatible
+    data types, and allows calling functions in DLLs or shared libraries.
+    It can be used to wrap these libraries in pure Python.
+  * [cffi] C Foreign Function Interface for Python. Interacts with almost any C
+    code from Python, based on C-like declarations that you can often copy-paste
+    from header files or documentation. (See video from [Alexander Steffen])
+* Programming mainly with C++ (see video from [Diego Rodriguez])
+  * [boost.python] a C++ library which enables seamless interoperability between
+    C++ and the Python programming language
+  * [pybind11] similar to boost.python, with less overhead (see video from [Ivan Smirnov])
+  * [cython] is an optimising static compiler for both the Python programming
+    language and the extended Cython programming language (based on Pyrex).
+    Can be used to give Pythonic interfaces to C and C++ libraries [cython book].
+    Cython is a implementation of the Python language, so the way
+    it integrates C/C++ could can not be reused and even there is differencies in
+    the API between python 2.7 and 3.5.
+    The documentation from python recomend to use other methods if that integration
+    must be portable, that is usable by other python implementation different that Cython.
+* Using an IDL
+  * [SWIG] is an interface compiler that connects programs written in C and C++
+    with scripting languages such as Perl, Python, Ruby, and Tcl
+  * [SIP] is a tool that makes it very easy to create Python bindings for C and
+    C++ libraries. SIP comprises a code generator and a Python module.
+    The code generator processes a set of specification files and generates
+    C or C++ code which is then compiled to create the bindings extension module.
+    The sip Python module provides support functions to the automatically generated code.
+
+# Code Examples
+
+This repository contains a trimmed, basic implementation of C++ class that can
+be used to represent complex numbers. This class is compiled to a static library,
+_libcomplex.a_.
+
+The repository also contains some Python test cases. These test cases interface
+the libclomplex.a library using some of the technologies mentioned above.
+
+## complex-ctypes
+
+The [ctypes] approach require that a pure C interface is created (see
+*Complex_wrapper.cpp*), and after that a Python Complex class (*complex.py*)
+is implemented to encapsulate the logic that attacks the C interface. Finally,
+test cases can use the Python Complex class.
+
+### Benefits
+* Quick compilation
+* Up-front code, no autogenerated magic
+* Smaller binaries
+* No external dependencies
+
+### Drawbacks
+* Too much interface code
+* Low-level management of types/pointers
+
+## boost.python-example
+
+The [boost.python] approach require having boost python binaries and Python
+development headers installed. Then only a tiny wrapper class needs to be
+implemented (see *Complex_boost.cpp*).
+
+### Benefits
+* Very low amount of extra code needed
+
+### Drawbacks
+* Big binary size
+* Slow compilation
+* Requires binary dependencies and development headers
+
+## pybind11-example
+
+The [pybind11] approach is essentially the same as [boost.python], with a
+slightly different syntax.
+
+### Benefits
+* Very low amount of extra code needed
+* Only depends on development headers (no binary dependencies)
+
+### Drawbacks
+* Huge binary size
+* Slow compilation
+
+## swig-example
+
+The [swig] way requires a declaration of the classes to be mapped using its
+Interface Definition Language (IDL), as it can be seen in _Complex.i_. Then
+SWIG will create both the C++ and the Python code required to interface it and
+bind it to the Complex C++ class.
+
+### Benefits
+* Low amount of extra code needed
+* Ability to use different binding languages, not only Python
+
+### Drawbacks
+* IDL requires some extra learning
+* Support for C++ is limited
+
+
+# More about python and C/C++ testing
+
+* Generate C++ test code with python
+  * [C,C++,Python unit/integ test generator]
+* Code coverage
+  * [code coverage] Why just stop running unit test? let's get some more information.
+
+# Environment to run the examples
+
+The base environment is based on Ubuntu 16.04, but cygwin is also supported. A
+Dockerfile is also provided to create a container image suitable to build the
+examples.
+
+## Ubuntu 16.04
+
+The following packages are needed:
+* cmake
+* g++
+* git
+* libboost-python-dev
+* python-dev
+* swig
+
+## Cygwin
+
+The following environment has been partially proven to work:
+* gcc with c++ support (tested with 6.4.0)
+* cmake 3.0 or higher (tested with 3.6.2)
+* make (tested with 4.2.1)
+* python 2.7 (tested with 2.7.14)
+* python2_devel
+* libboost_python-devel
+* swig
+
+**python2-devel** package installation was not succesfully performed.
+
+# Run with docker
+
+Just build an image from the provided _Dockerfile_. If you want to run the tests,
+attach to the container, go to the _/root/build_ directory, and get into the
+example that you want to run. As an example:
+
+```
+user@host$ docker build -t python-and-cpp-testing .
+user@host$ docker run -it python-and-cpp-testing /bin/bash
+root@container# cd /root/build/ctypes-example
+root@container# python test_complex.py
+```
+
 # Helpful stuff
 
 * [Grip] is useful to preview [GitHub Markdown] pages locally.
-
-Links to look at.
 
 
 [//]: # (Place links down here)
@@ -96,5 +208,3 @@ Links to look at.
 [Diego Rodriguez]: https://www.youtube.com/watch?v=bJq1n4gQFfw&t=275s
 [Alexander Steffen]: https://www.youtube.com/watch?v=zW_HyDTPjO0
 [Ivan Smirnov]: https://www.youtube.com/watch?v=jQedHfF1Jfw&t=75s
-
-
