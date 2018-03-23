@@ -49,7 +49,7 @@ following alternatives:
   * [pybind11] similar to boost.python, with less overhead (see video from [Ivan Smirnov])
   * [cython] is an optimising static compiler for both the Python programming
     language and the extended Cython programming language (based on Pyrex).
-    Can be used to give Pythonic interfaces to C and C++ libraries [cython book].
+    Can be used to give Pythonic interfaces to C and C++ libraries. See the [cython book].
     Cython is a implementation of the Python language, so the way
     it integrates C/C++ could can not be reused and even there is differencies in
     the API between python 2.7 and 3.5.
