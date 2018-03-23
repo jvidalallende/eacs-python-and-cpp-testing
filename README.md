@@ -48,13 +48,15 @@ following alternatives:
     C++ and the Python programming language
   * [pybind11] similar to boost.python, with less overhead (see video from [Ivan Smirnov])
   * [cython] is an optimising static compiler for both the Python programming
-    language and the extended Cython programming language (based on Pyrex).
+    language and the extended Cython programming language (based on Pyrex).    
     Can be used to give Pythonic interfaces to C and C++ libraries. See the [cython book].
     Cython is a implementation of the Python language, so the way
     it integrates C/C++ could can not be reused and even there is differencies in
-    the API between python 2.7 and 3.5.
+    the API between python 2.7 and 3.5.    
     The documentation from python recomend to use other methods if that integration
-    must be portable, that is usable by other python implementation different that Cython.
+    must be portable, that is usable by other python implementation different that Cython.    
+    Video, [Cython Tutorial - Bridging between Python and C/C++ for performance].
+    
 * Using an IDL
   * [SWIG] is an interface compiler that connects programs written in C and C++
     with scripting languages such as Perl, Python, Ruby, and Tcl
@@ -201,6 +203,7 @@ root@container# python test_complex.py
 [pybind11]: https://github.com/pybind/pybind11
 [cython]: http://cython.org/
 [cython book]: http://shop.oreilly.com/product/0636920033431.do
+[Cython Tutorial - Bridging between Python and C/C++ for performance]: https://www.youtube.com/watch?v=mXuEoqK4bEc
 [ctypes]: https://docs.python.org/3/library/ctypes.html
 [cffi]: https://cffi.readthedocs.io/en/latest/
 [SWIG]: http://www.swig.org/exec.html
