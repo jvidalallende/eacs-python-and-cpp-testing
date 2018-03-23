@@ -3,6 +3,8 @@
 This repository hosts the investigation assignment for EACS Software Tests.
 It is focused on how to use [Python] to test [C++] programs.
 
+You can find the presentation complementing this work here: [C/C++ unit testing with Python]
+
 # Authors
 
 This assignment is done by:
@@ -189,6 +191,7 @@ root@container# python test_complex.py
 
 [Python]: https://www.python.org/
 [C++]: https://isocpp.org/
+[C/C++ unit testing with Python]: https://docs.google.com/presentation/d/1TgqXKO2EEYKQYNC5y6i_eWU_XEUnLv9D3WstDmYfgNY/edit?usp=sharing
 [Python and C++]: https://wiki.python.org/moin/IntegratingPythonWithOtherLanguages#C.2FC.2B-.2B-
 [jramed]: https://github.com/jramed
 [jvidalallende]: https://github.com/jvidalallende
