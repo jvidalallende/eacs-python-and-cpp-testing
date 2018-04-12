@@ -17,7 +17,7 @@ Python can be integrated with other languages, one of them is C++, see [Python a
 This is a two way road, we can use C/C++ from python, by mean of integrating
 built-in modules in python, or run python code from C++.
 
-In this assigment we are focusing in how to integrate  C/C++ code with Python.
+In this assignment we are focusing in how to integrate  C/C++ code with Python.
 Furthermore we are interested if it is possible to run unit tests written in
 Python to test C++ code.
 
@@ -100,6 +100,7 @@ implemented (see *Complex_boost.cpp*).
 
 ### Benefits
 * Very low amount of extra code needed
+* High number of C++ features supported
 
 ### Drawbacks
 * Big binary size
@@ -114,6 +115,7 @@ slightly different syntax.
 ### Benefits
 * Very low amount of extra code needed
 * Only depends on development headers (no binary dependencies)
+* High number of C++ features supported
 
 ### Drawbacks
 * Huge binary size
