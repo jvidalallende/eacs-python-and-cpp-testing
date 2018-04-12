@@ -1,13 +1,14 @@
-FROM ubuntu:xenial
+FROM alpine:latest
 
-RUN apt-get update && apt-get install -y \
+RUN apk update && apk add \
+    make \
     cmake \
     g++ \
     git \
-    libboost-python-dev \
-    python-dev \
+    boost-dev \
+    python2-dev \
     swig \
-    vim-nox
+    vim
 
 ADD src /root/src
 
